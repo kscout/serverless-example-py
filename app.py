@@ -7,15 +7,11 @@ app = Flask(__name__)
 
 
 
-@app.route("/see", methods=["GET"])
+@app.route("/", methods=["GET"])
 def see():
     items= {}
     items['hello'] = "World"
     return Response(json.dumps(items), status=200, mimetype='application/json')
-
-
-
-
 
 
 if __name__ == '__main__':
